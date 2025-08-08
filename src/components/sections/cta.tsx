@@ -15,7 +15,7 @@ export function Cta() {
   return (
     <section id="checkout" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
-        <Card className="max-w-4xl mx-auto bg-card border border-primary/20 p-6 md:p-10 rounded-xl shadow-2xl shadow-primary/10">
+        <Card className="relative max-w-4xl mx-auto bg-card border border-primary/20 p-6 md:p-10 rounded-xl shadow-2xl shadow-primary/10 rotating-border">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="text-left">
               <CardTitle className="text-3xl md:text-4xl font-bold mb-2">Acesso Vitalício por apenas 12x de <span className="text-primary">R$5,79</span></CardTitle>
