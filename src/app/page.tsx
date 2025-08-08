@@ -6,6 +6,7 @@ import { About } from "@/components/sections/about";
 import { Footer } from "@/components/footer";
 import { ForWhom } from "@/components/sections/for-whom";
 import { Cta } from "@/components/sections/cta";
+import { Faq } from "@/components/sections/faq";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <ForWhom />
         <About />
         <Cta />
+        <Faq />
       </main>
       <Footer />
     </div>
