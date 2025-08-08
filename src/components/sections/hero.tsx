@@ -18,6 +18,20 @@ export function Hero() {
             QUERO ACESSO IMEDIATO
           </Link>
         </Button>
+        <div className="mt-12 max-w-4xl mx-auto">
+          <div className="aspect-video rounded-lg overflow-hidden border-2 border-primary/50 shadow-2xl shadow-primary/20">
+            <video
+              className="w-full h-full object-cover"
+              controls
+              poster="https://placehold.co/1280x720.png"
+              data-ai-hint="video thumbnail"
+            >
+              {/* Adicione a fonte do seu vídeo aqui */}
+              {/* <source src="/seu-video.mp4" type="video/mp4" /> */}
+              Seu navegador não suporta o elemento de vídeo.
+            </video>
+          </div>
+        </div>
       </div>
     </section>
   );
