@@ -1,10 +1,10 @@
 import { Hero } from "@/components/sections/hero";
 import { Offer } from "@/components/sections/offer";
 import { Testimonials } from "@/components/sections/testimonials";
-import { Pricing } from "@/components/sections/pricing";
 import { About } from "@/components/sections/about";
 import { Footer } from "@/components/footer";
-import { AiMotivator } from "@/components/sections/ai-motivator";
+import { ForWhom } from "@/components/sections/for-whom";
+import { Cta } from "@/components/sections/cta";
 
 export default function Home() {
   return (
@@ -13,9 +13,9 @@ export default function Home() {
         <Hero />
         <Offer />
         <Testimonials />
-        <AiMotivator />
+        <ForWhom />
         <About />
-        <Pricing />
+        <Cta />
       </main>
       <Footer />
     </div>
