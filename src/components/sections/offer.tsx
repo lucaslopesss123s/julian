@@ -20,7 +20,9 @@ export function Offer() {
   return (
     <section id="offer" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        <div className="relative text-center mb-12 p-4">
+          <div className="absolute top-0 left-0 w-24 h-24 border-t-8 border-l-8 border-primary rounded-tl-3xl opacity-50"></div>
+          <div className="absolute bottom-0 right-0 w-24 h-24 border-b-8 border-r-8 border-primary rounded-br-3xl opacity-50"></div>
           <h2 className="text-3xl md:text-5xl font-bold mb-4">O que você terá acesso no <span className="text-primary">Close Friends?</span></h2>
           <p className="text-muted-foreground mt-2 max-w-3xl mx-auto text-lg">Um guia completo para você atingir a sua melhor versão, com acesso a todos os segredos que eu uso no meu dia a dia.</p>
         </div>
