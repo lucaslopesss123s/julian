@@ -1,42 +1,23 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 
 export function Hero() {
   return (
-    <section className="relative text-white">
-      <div className="container mx-auto px-4 pt-24 pb-12">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div className="flex flex-col items-center md:items-start text-center md:text-left">
-             <Badge variant="destructive" className="mb-4">
-              Conteúdo 100% exclusivo no Close Friends
-            </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold font-headline mb-4 max-w-xl">
-              Descubra como eu mantenho minha performance no trabalho e no treino!
-            </h1>
-            <p className="text-lg md:text-xl text-white/90 mb-8 max-w-xl">
-              Acesso exclusivo aos bastidores da minha rotina como policial e atleta.
-            </p>
-            <Button asChild size="lg" className="text-lg font-bold bg-primary hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 shadow-lg">
-              <Link href="#checkout">
-                Garantir Acesso — R$57,90
-              </Link>
-            </Button>
-          </div>
-          <div className="relative h-96 w-full flex items-center justify-center">
-             <Image
-              src="https://placehold.co/500x600"
-              alt="Influencer in police uniform with a gym bag"
-              width={500}
-              height={600}
-              className="z-10 object-cover"
-              data-ai-hint="policeman fitness"
-              priority
-            />
-             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-20" />
-          </div>
-        </div>
+    <section className="relative bg-background text-white py-20 md:py-32">
+      <div className="absolute inset-0 bg-grid-red-500/10 bg-[size:20px_20px] [mask-image:linear-gradient(to_bottom,white_10%,transparent_100%)]"></div>
+      <div className="container mx-auto px-4 text-center relative z-10">
+        <h1 className="text-4xl md:text-7xl font-extrabold tracking-tighter mb-4">
+          O segredo da alta performance: <br /> <span className="text-primary">Policial e Atleta.</span>
+        </h1>
+        <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-8">
+          Acesso exclusivo aos bastidores da minha rotina, unindo a disciplina da polícia com a dedicação do esporte.
+        </p>
+        <Button asChild size="lg" className="text-lg font-bold bg-primary hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_hsl(var(--primary))]">
+          <Link href="#checkout">
+            QUERO ACESSO IMEDIATO
+          </Link>
+        </Button>
       </div>
     </section>
   );

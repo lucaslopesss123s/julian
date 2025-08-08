@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { generateMotivationalMessage } from "@/ai/flows/motivational-message-generator";
 import { Loader2, Wand2 } from "lucide-react";
@@ -78,57 +79,58 @@ export function AiMotivator() {
   return (
     <section id="ai-motivator" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
-        <Card>
-          <CardHeader className="text-center">
-            <CardTitle className="text-3xl md:text-4xl font-bold font-headline">
-              Gerador de Motivação com IA
+        <Card className="bg-card border border-border/50 rounded-xl p-6 md:p-10">
+          <CardHeader className="text-center p-0 mb-8">
+            <CardTitle className="text-3xl md:text-5xl font-bold">
+              Motivação <span className="text-primary">Instantânea</span> com IA
             </CardTitle>
-            <CardDescription>
+            <CardDescription className="text-lg text-muted-foreground max-w-2xl mx-auto mt-2">
               Enfrentou um desafio? Descreva-o, adicione uma foto e nossa IA criará uma mensagem de superação para você.
             </CardDescription>
           </CardHeader>
-          <CardContent>
-            <div className="grid md:grid-cols-2 gap-8 items-start">
+          <CardContent className="p-0">
+            <div className="grid md:grid-cols-2 gap-8 items-start max-w-6xl mx-auto">
               <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <label htmlFor="photo-upload" className="block text-sm font-medium mb-2">Sua Foto de Desafio</label>
-                  <Input id="photo-upload" type="file" accept="image/*" onChange={handleFileChange} />
+                <div className="space-y-2">
+                  <Label htmlFor="photo-upload" className="text-base">Sua Foto de Desafio</Label>
+                  <Input id="photo-upload" type="file" accept="image/*" onChange={handleFileChange} className="bg-background"/>
                 </div>
                 {photoPreview && (
                   <div className="mt-4">
-                    <Image src={photoPreview} alt="Preview" width={200} height={200} className="rounded-lg object-cover" />
+                    <Image src={photoPreview} alt="Preview" width={200} height={200} className="rounded-lg object-cover aspect-square" />
                   </div>
                 )}
-                <div>
-                  <label htmlFor="description" className="block text-sm font-medium mb-2">Descreva o Conteúdo</label>
+                <div className="space-y-2">
+                  <Label htmlFor="description" className="text-base">Descreva o Conteúdo</Label>
                   <Textarea
                     id="description"
                     value={contentDescription}
                     onChange={(e) => setContentDescription(e.target.value)}
                     placeholder="Ex: Minha preparação para o teste de aptidão física..."
                     rows={4}
+                    className="bg-background"
                   />
                 </div>
-                <Button type="submit" disabled={loading} className="w-full">
+                <Button type="submit" disabled={loading} className="w-full text-lg h-12 font-bold">
                   {loading ? (
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    <Loader2 className="mr-2 h-5 w-5 animate-spin" />
                   ) : (
-                    <Wand2 className="mr-2 h-4 w-4" />
+                    <Wand2 className="mr-2 h-5 w-5" />
                   )}
-                  Gerar Mensagem
+                  GERAR MENSAGEM
                 </Button>
               </form>
-              <div className="flex items-center justify-center h-full">
+              <div className="flex items-center justify-center h-full min-h-[300px] bg-background rounded-lg border-2 border-dashed p-4">
                 {loading && (
-                  <div className="flex flex-col items-center gap-4">
+                  <div className="flex flex-col items-center gap-4 text-center">
                     <Loader2 className="h-12 w-12 animate-spin text-primary" />
                     <p className="text-muted-foreground">Gerando sua dose de motivação...</p>
                   </div>
                 )}
                 {!loading && motivationalMessage && (
-                  <Card className="w-full bg-secondary">
+                  <Card className="w-full bg-card shadow-none border-none">
                     <CardHeader>
-                      <CardTitle>Sua Mensagem Motivacional:</CardTitle>
+                      <CardTitle className="text-primary">Sua Mensagem Motivacional:</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <p className="text-lg italic">&quot;{motivationalMessage}&quot;</p>
@@ -136,7 +138,8 @@ export function AiMotivator() {
                   </Card>
                 )}
                  {!loading && !motivationalMessage && (
-                  <div className="text-center text-muted-foreground p-8 border-2 border-dashed rounded-lg">
+                  <div className="text-center text-muted-foreground">
+                    <Wand2 className="mx-auto h-12 w-12 mb-4" />
                     <p>Sua mensagem inspiradora aparecerá aqui.</p>
                   </div>
                 )}

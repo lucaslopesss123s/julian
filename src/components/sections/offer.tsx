@@ -1,45 +1,42 @@
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { HeartPulse, Siren, Video } from "lucide-react";
+import { Check } from "lucide-react";
 
 const offerItems = [
   {
-    icon: <HeartPulse className="h-10 w-10 text-primary" />,
-    title: "Minha Preparação",
-    points: ["Treino cardio", "Dieta, refeições e suplementação"],
+    title: "Módulo Treinamento",
+    points: ["Treinos para hipertrofia", "Cardio para resistência", "Prevenção de lesões"],
   },
   {
-    icon: <Siren className="h-10 w-10 text-primary" />,
-    title: "Minha Rotina",
-    points: ["Trabalho na polícia", "Como concilio turno noturno e dieta", "Dicas sobre rotina policial e concursos"],
+    title: "Módulo Nutrição",
+    points: ["Dieta para ganho de massa", "Suplementação essencial", "Refeições pré e pós-treino"],
   },
   {
-    icon: <Video className="h-10 w-10 text-primary" />,
-    title: "Criação de Conteúdo",
-    points: ["Como cresci na internet", "Como começar a postar e horários", "Bastidores das gravações"],
+    title: "Módulo Mentalidade",
+    points: ["Disciplina e Foco", "Conciliando turnos e treinos", "Resiliência e superação"],
   },
 ];
 
 export function Offer() {
   return (
-    <section id="offer" className="py-16 md:py-24 bg-card">
+    <section id="offer" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold font-headline">O que você vai encontrar no Close Friends?</h2>
-          <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">Um olhar exclusivo sobre os pilares que sustentam minha performance e crescimento.</p>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">O que você terá acesso no <span className="text-primary">Close Friends?</span></h2>
+          <p className="text-muted-foreground mt-2 max-w-3xl mx-auto text-lg">Um guia completo para você atingir a sua melhor versão, com acesso a todos os segredos que eu uso no meu dia a dia.</p>
         </div>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {offerItems.map((item, index) => (
-            <Card key={index} className="flex flex-col items-center text-center p-6 bg-background hover:border-primary transition-all duration-300 transform hover:-translate-y-2">
-              <div className="mb-4">
-                {item.icon}
-              </div>
-              <CardHeader className="p-0">
-                <CardTitle className="text-xl font-bold font-headline mb-2">{item.title}</CardTitle>
+            <Card key={index} className="flex flex-col text-left p-6 bg-card border border-border/50 rounded-xl hover:border-primary transition-all duration-300 transform hover:-translate-y-2">
+              <CardHeader className="p-0 mb-4">
+                <CardTitle className="text-2xl font-bold">{item.title}</CardTitle>
               </CardHeader>
               <CardContent className="p-0">
-                <ul className="space-y-2 text-muted-foreground">
+                <ul className="space-y-3 text-muted-foreground">
                   {item.points.map((point, i) => (
-                    <li key={i}>{point}</li>
+                    <li key={i} className="flex items-center">
+                      <Check className="h-5 w-5 text-primary mr-3" />
+                      <span>{point}</span>
+                    </li>
                   ))}
                 </ul>
               </CardContent>
