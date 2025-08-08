@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster"
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'FitCop CF',
+  title: 'Julian Leite',
   description: 'Acesso exclusivo aos bastidores da rotina de um policial e atleta.',
 };
 

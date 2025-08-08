@@ -18,7 +18,7 @@ export function About() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent" />
           </div>
           <div className="text-left">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Quem é <span className="text-primary">FitCop CF?</span></h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Quem é <span className="text-primary">Julian Leite?</span></h2>
             <div className="space-y-4 text-lg text-muted-foreground">
               <p>
                 Sou policial, criador de conteúdo e atleta. Minha missão é ajudar pessoas a conciliarem saúde, uma profissão desafiadora e a vida pessoal, provando que com disciplina, tudo é possível.

@@ -9,7 +9,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
           <div className="flex items-center space-x-3">
             <Logo />
-            <span className="font-bold text-xl">FitCop CF</span>
+            <span className="font-bold text-xl">Julian Leite</span>
           </div>
           <div className="flex space-x-6 text-sm text-muted-foreground">
             <Link href="#" className="hover:text-primary transition-colors">Termos de Uso</Link>
@@ -28,7 +28,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-border/50 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} FitCop CF. Todos os direitos reservados. Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook.</p>
+          <p>&copy; {new Date().getFullYear()} Julian Leite. Todos os direitos reservados. Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook.</p>
         </div>
       </div>
     </footer>
