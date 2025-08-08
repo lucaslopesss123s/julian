@@ -13,12 +13,7 @@ export function Hero() {
         <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-8">
           Acesso exclusivo aos bastidores da minha rotina, unindo a disciplina da polícia com a dedicação do esporte.
         </p>
-        <Button asChild size="lg" className="text-lg font-bold bg-primary hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_hsl(var(--primary))]">
-          <Link href="#checkout">
-            QUERO ACESSO IMEDIATO
-          </Link>
-        </Button>
-        <div className="mt-12 max-w-4xl mx-auto">
+        <div className="mb-8 max-w-4xl mx-auto">
           <div className="aspect-video rounded-lg overflow-hidden border-2 border-primary/50 shadow-2xl shadow-primary/20">
             <video
               className="w-full h-full object-cover"
@@ -32,6 +27,11 @@ export function Hero() {
             </video>
           </div>
         </div>
+        <Button asChild size="lg" className="text-lg font-bold bg-primary hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_hsl(var(--primary))]">
+          <Link href="#checkout">
+            QUERO ACESSO IMEDIATO
+          </Link>
+        </Button>
       </div>
     </section>
   );
