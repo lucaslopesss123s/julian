@@ -16,8 +16,6 @@ export function Cta() {
     <section id="checkout" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="relative max-w-4xl mx-auto">
-          <div className="absolute -top-8 -left-8 w-24 h-24 border-t-8 border-l-8 border-primary rounded-tl-3xl opacity-50 z-0"></div>
-          <div className="absolute -bottom-8 -right-8 w-24 h-24 border-b-8 border-r-8 border-primary rounded-br-3xl opacity-50 z-0"></div>
           <Card className="relative bg-card border border-primary/20 p-6 md:p-10 rounded-xl shadow-2xl shadow-primary/10 rotating-border z-10">
             <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
               <div className="text-left">
