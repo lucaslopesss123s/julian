@@ -21,7 +21,7 @@ export function ForWhom() {
                 </Badge>
                 <h2 className="text-3xl md:text-5xl font-bold max-w-2xl mx-auto mb-12">O Close Friends é para você se você tiver qualquer uma das dúvidas a seguir:</h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl w-full mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl w-full">
                     {questions.map((q, i) => (
                         <div key={i} className="flex items-center gap-4 text-left p-4 rounded-lg bg-card">
                             <div className="flex-shrink-0 bg-primary/20 text-primary font-bold text-2xl rounded-md h-12 w-12 flex items-center justify-center">
@@ -31,7 +31,15 @@ export function ForWhom() {
                         </div>
                     ))}
                 </div>
+            </div>
+        </section>
+    )
+}
 
+export function ForWhomCta() {
+    return (
+        <section className="py-8 md:py-12 bg-background text-white">
+            <div className="container mx-auto px-4 flex flex-col items-center text-center">
                 <Button size="lg" className="text-lg font-bold bg-primary hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_hsl(var(--primary))]">
                     QUERO ACESSO IMEDIATO
                 </Button>
