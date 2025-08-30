@@ -86,26 +86,3 @@ body {
     @apply bg-background text-foreground;
   }
 }
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.rotating-border::before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  inset: -3px;
-  border-radius: inherit;
-  background: conic-gradient(from 90deg at 50% 50%, hsl(var(--primary)) 0%, hsl(var(--primary)) 15%, transparent 25%, transparent 75%, hsl(var(--primary)) 85%, hsl(var(--primary)) 100% );
-  animation: rotate 4s linear infinite;
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-}

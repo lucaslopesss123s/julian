@@ -12,9 +12,9 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <main className="flex-1">
         <Hero />
-        <Offer />
-        <Testimonials />
         <ForWhom />
+        <Testimonials />
+        <Offer />
         <ForWhomCta />
         <About />
         <Cta />

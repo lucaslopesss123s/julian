@@ -15,11 +15,11 @@ export function ForWhom() {
     return (
         <section id="for-whom" className="py-16 md:py-24 bg-background text-white">
             <div className="container mx-auto px-4 flex flex-col items-center text-center">
-                <Badge variant="outline" className="text-sm py-2 px-4 rounded-full border-primary/50 text-primary mb-6">
-                    <User className="w-4 h-4 mr-2" />
+                <Badge variant="outline" className="text-lg py-3 px-6 rounded-full border-primary/50 text-primary mb-6">
+                    <User className="w-6 h-6 mr-3" />
                     Para quem é?
                 </Badge>
-                <h2 className="text-3xl md:text-5xl font-bold max-w-2xl mx-auto mb-12">O Close Friends é para você se você tiver qualquer uma das dúvidas a seguir:</h2>
+                <h2 className="text-3xl md:text-5xl font-bold max-w-2xl mx-auto mb-12">Descubra se o meu Close Friend é pra você:</h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl w-full">
                     {questions.map((q, i) => (

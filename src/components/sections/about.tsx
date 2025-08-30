@@ -8,17 +8,15 @@ export function About() {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           <div className="relative aspect-[4/5] rounded-xl overflow-hidden shadow-2xl">
-             <Image
-              src="https://placehold.co/500x600"
-              alt="Influencer in police uniform with a gym bag"
-              layout="fill"
-              className="object-cover"
-              data-ai-hint="policeman fitness"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent" />
+             {/* Desktop background */}
+             <div className="hidden md:block absolute inset-0 bg-[url('/PCJULIAN.png')] bg-cover bg-center bg-no-repeat"></div>
+             {/* Mobile background */}
+             <div className="block md:hidden absolute inset-0 bg-[url('/MOBILEJULIAN.png')] bg-cover bg-center bg-no-repeat"></div>
+             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent" />
           </div>
-          <div className="text-left">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Quem é <span className="text-primary">Julian Leite?</span></h2>
+          <div className="text-center">
+            <h2 className="text-5xl md:text-7xl font-bold mb-2"><span className="text-primary">Julian Leite</span></h2>
+            <p className="text-xl md:text-2xl font-semibold text-white mb-6">INFLUENCIADOR, POLICIAL E ATLETA</p>
             <div className="space-y-4 text-lg text-muted-foreground">
               <p>
                 Sou policial, criador de conteúdo e atleta. Minha missão é ajudar pessoas a conciliarem saúde, uma profissão desafiadora e a vida pessoal, provando que com disciplina, tudo é possível.

@@ -1,6 +1,35 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Star } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import Image from "next/image";
+
+const beforeAfterImages = [
+  {
+    before: "https://placehold.co/400x400",
+    after: "https://placehold.co/400x400",
+    name: "Carlos Silva",
+    description: "6 meses de transformação"
+  },
+  {
+    before: "https://placehold.co/400x400",
+    after: "https://placehold.co/400x400",
+    name: "Juliana Pereira",
+    description: "4 meses de dedicação"
+  },
+  {
+    before: "https://placehold.co/400x400",
+    after: "https://placehold.co/400x400",
+    name: "Marcos Andrade",
+    description: "8 meses de evolução"
+  },
+  {
+    before: "https://placehold.co/400x400",
+    after: "https://placehold.co/400x400",
+    name: "Ana Costa",
+    description: "5 meses de progresso"
+  }
+];
 
 const testimonials = [
   {
@@ -41,6 +70,57 @@ export function Testimonials() {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold">O que os membros <span className="text-primary">estão dizendo</span></h2>
           <p className="text-muted-foreground mt-2 text-lg">Resultados reais de pessoas que transformaram suas vidas.</p>
+        </div>
+        
+        {/* Carrossel de Antes e Depois */}
+        <div className="mb-16">
+          <h3 className="text-2xl md:text-3xl font-bold text-center mb-8">Transformações <span className="text-primary">Reais</span></h3>
+          <Carousel className="w-full max-w-4xl mx-auto">
+            <CarouselContent>
+              {beforeAfterImages.map((transformation, index) => (
+                <CarouselItem key={index} className="basis-full">
+                  <Card className="bg-background border border-border/50 rounded-xl p-4">
+                    <CardContent className="p-0">
+                      <div className="grid grid-cols-2 gap-4 mb-4">
+                        <div className="relative">
+                          <Image
+                            src={transformation.before}
+                            alt={`Antes - ${transformation.name}`}
+                            width={200}
+                            height={200}
+                            className="rounded-lg object-cover aspect-square"
+                            data-ai-hint="before transformation photo"
+                          />
+                          <div className="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded text-xs font-bold">
+                            ANTES
+                          </div>
+                        </div>
+                        <div className="relative">
+                          <Image
+                            src={transformation.after}
+                            alt={`Depois - ${transformation.name}`}
+                            width={200}
+                            height={200}
+                            className="rounded-lg object-cover aspect-square"
+                            data-ai-hint="after transformation photo"
+                          />
+                          <div className="absolute top-2 left-2 bg-green-500 text-white px-2 py-1 rounded text-xs font-bold">
+                            DEPOIS
+                          </div>
+                        </div>
+                      </div>
+                      <div className="text-center">
+                        <h4 className="font-bold text-lg">{transformation.name}</h4>
+                        <p className="text-muted-foreground text-sm">{transformation.description}</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {testimonials.map((testimonial, index) => (

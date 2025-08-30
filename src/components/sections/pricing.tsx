@@ -20,8 +20,8 @@ export function Pricing() {
         <Card className="max-w-4xl mx-auto bg-card border border-border/50 p-6 md:p-10 rounded-xl">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="text-left">
-              <h2 className="text-3xl md:text-4xl font-bold mb-2">Acesso Vitalício por apenas 12x de <span className="text-primary">R$5,79</span></h2>
-              <p className="text-muted-foreground mb-6">Ou R$57,90 à vista. Um único pagamento para transformar sua rotina para sempre.</p>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 break-words">Acesso Vitalício por apenas 12x de <span className="text-primary">R$5,79</span></h2>
+              <p className="text-sm md:text-base text-muted-foreground mb-6 break-words">Ou R$57,90 à vista. Um único pagamento para transformar sua rotina para sempre.</p>
               <ul className="space-y-3 mb-8">
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-center">
@@ -35,8 +35,8 @@ export function Pricing() {
             <div className="w-full">
                 <Card className="bg-background border-border/80 rounded-lg">
                     <CardHeader>
-                        <CardTitle>Complete seu Pagamento</CardTitle>
-                        <CardDescription>Insira seus dados para garantir o acesso.</CardDescription>
+                        <CardTitle className="text-lg sm:text-xl break-words">Complete seu Pagamento</CardTitle>
+                        <CardDescription className="text-sm break-words">Insira seus dados para garantir o acesso.</CardDescription>
                     </CardHeader>
                     <CardContent>
                         <form className="space-y-4">
